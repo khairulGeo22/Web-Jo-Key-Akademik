@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Bantuan Akademik Profesional</title>
+    <!-- Tailwind CSS CDN untuk styling yang cepat dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #1f2937;
+        }
+
+        /* Keyframes untuk animasi fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-up {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">
+                Pakar Akademik
+            </a>
+            <nav>
+                <a href="#estimasi" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Estimasi</a>
+                <a href="#layanan" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Layanan</a>
+                <a href="#portofolio" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Portofolio</a>
+                <a href="#testimoni" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Testimoni</a>
+                <a href="#faq" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">FAQ</a>
+                <a href="#tentang-kami" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300 hidden md:inline-block">Tentang Kami</a>
+                <a href="#kontak" class="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+                    Hubungi Kami
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Bagian Utama / Hero Section -->
+    <main class="py-12 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-4 fade-in-up">
+                Solusi Akademik Anda, <br>Cepat dan Terjamin.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                Kami hadir sebagai solusi profesional untuk membantu Anda menyelesaikan tugas akademik dengan cepat, tepat, dan terpercaya. Dari skripsi hingga publikasi jurnal internasional.
+            </p>
+            <a href="#layanan" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105 fade-in-up" style="animation-delay: 0.4s;">
+                Lihat Layanan Kami
+            </a>
+        </div>
+    </main>
+    
+    <!-- Bagian Nilai Unggulan: Murah, Ramah, Terpercaya, Layanan Siap Sedia -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Kartu Nilai 1: Murah -->
+                <div class="flex flex-col items-center p-6 rounded-2xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm-7 0a7 7 0 1014 0A7 7 0 005 8z" />
+                    </svg>
+                    <h4 class="text-lg font-bold mb-2">Murah</h4>
+                    <p class="text-gray-600 text-sm">
+                        Harga bersahabat, kualitas terjamin. Kami menawarkan layanan terbaik dengan biaya yang terjangkau.
+                    </p>
+                </div>
+                <!-- Kartu Nilai 2: Ramah -->
+                <div class="flex flex-col items-center p-6 rounded-2xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <h4 class="text-lg font-bold mb-2">Ramah</h4>
+                    <p class="text-gray-600 text-sm">
+                        Konsultasi gratis tanpa batas. Kami siap mendengarkan dan membantu Anda dengan sepenuh hati.
+                    </p>
+                </div>
+                <!-- Kartu Nilai 3: Terpercaya -->
+                <div class="flex flex-col items-center p-6 rounded-2xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5-6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2z" />
+                    </svg>
+                    <h4 class="text-lg font-bold mb-2">Terpercaya</h4>
+                    <p class="text-gray-600 text-sm">
+                        Kami menjamin kerahasiaan data dan kesesuaian hasil. Kepuasan Anda adalah prioritas kami.
+                    </p>
+                </div>
+                <!-- Kartu Nilai 4: Layanan Siap Sedia -->
+                <div class="flex flex-col items-center p-6 rounded-2xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-purple-500 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3M12 20a8 8 0 110-16 8 8 0 010 16z" />
+                    </svg>
+                    <h4 class="text-lg font-bold mb-2">Layanan Siap Sedia</h4>
+                    <p class="text-gray-600 text-sm">
+                        Tim kami siap melayani Anda 24/7. Kapan pun Anda butuh, kami selalu ada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Statistik Keberhasilan -->
+    <section class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">Pakar Akademik dalam Angka</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-5xl font-extrabold text-indigo-400" id="counter1">0</div>
+                    <p class="text-xl mt-2 font-medium">Proyek Sukses</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-indigo-400" id="counter2">0</div>
+                    <p class="text-xl mt-2 font-medium">Klien Puas</p>
+                </div>
+                <div>
+                    <div class="text-5xl font-extrabold text-indigo-400" id="counter3">0</div>
+                    <p class="text-xl mt-2 font-medium">Publikasi Jurnal</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bagian Kalkulator Estimasi -->
+    <section id="estimasi" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Kalkulator Estimasi Harga</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Dapatkan perkiraan biaya layanan kami sesuai dengan kebutuhan Anda.
+            </p>
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <form id="estimation-form" class="space-y-6">
+                    <div>
+                        <label for="project_type" class="block text-left text-gray-700 font-semibold mb-2">Jenis Proyek</label>
+                        <select id="project_type" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <option value="skripsi_proposal">Proposal Skripsi (Bab 1-3)</option>
+                            <option value="skripsi_full">Skripsi Lengkap</option>
+                            <option value="tesis_proposal">Proposal Tesis (Bab 1-3)</option>
+                            <option value="tesis_full">Tesis Lengkap</option>
+                            <option value="disertasi_proposal">Proposal Disertasi (Bab 1-3)</option>
+                            <option value="disertasi_full">Disertasi Lengkap</option>
+                            <option value="jurnal_sinta">Artikel Jurnal Sinta 4/5</option>
+                            <option value="jurnal_internasional">Artikel Jurnal Internasional (Q1-Q4)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="complexity" class="block text-left text-gray-700 font-semibold mb-2">Tingkat Kerumitan</label>
+                        <select id="complexity" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <option value="normal">Normal</option>
+                            <option value="medium">Sedang (+15%)</option>
+                            <option value="high">Kompleks (+30%)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="deadline" class="block text-left text-gray-700 font-semibold mb-2">Tenggat Waktu</label>
+                        <select id="deadline" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <option value="normal">Normal</option>
+                            <option value="urgent">Cepat (+20%)</option>
+                            <option value="fast_track">Sangat Cepat (+50%)</option>
+                        </select>
+                    </div>
+                    <button type="button" id="calculate_btn" class="w-full bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                        Hitung Estimasi
+                    </button>
+                </form>
+                <div id="estimation-result" class="mt-8 p-6 bg-indigo-50 rounded-lg text-center font-bold text-gray-800 hidden">
+                    <p class="text-sm text-gray-600 mb-2">Estimasi Biaya Proyek Anda:</p>
+                    <p class="text-3xl text-indigo-700" id="estimated_price">Rp 0</p>
+                    <p class="text-xs text-gray-500 mt-2">*Harga final dapat disesuaikan setelah konsultasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Layanan dengan daftar harga -->
+    <section id="layanan" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Layanan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Kartu Layanan Unggulan: Publikasi Sinta 4 & 5 (Fast Track) -->
+                <div class="bg-indigo-600 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300 transform scale-105 relative overflow-hidden">
+                    <span class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-sm font-bold px-3 py-1 rounded-bl-lg">Terpopuler</span>
+                    <div class="flex justify-center items-center w-16 h-16 bg-white text-indigo-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2 text-white">Publikasi Sinta Fast Track</h3>
+                    <p class="text-sm text-center font-bold text-yellow-300 mb-4">Mulai dari Rp 500.000</p>
+                    <p class="text-white text-center text-sm">
+                        Penulisan artikel selesai dalam **3 hari**, publikasi di jurnal **Sinta 4 & 5** dalam **10 hari**.
+                    </p>
+                    <a href="https://wa.me/6282128721401" class="block mt-6 text-center text-sm font-semibold text-white hover:text-yellow-300 transition duration-300">
+                        Hubungi untuk Detail >>
+                    </a>
+                </div>
+
+                <!-- Kartu Layanan: Paket Super Komplit -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-pink-100 text-pink-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.485 9.168 4.5 7.5 4.5 5.832 4.5 4.168 5.485 3 6.253V20.5a.5.5 0 01-1 0V6.253C2.5 5.485 4.168 4.5 5.5 4.5c1.668 0 3.332.985 4.5 1.753" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Paket Super Komplit</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Harga Paket Spesial</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Pendampingan Skripsi/Tesis/Disertasi + Bonus Artikel Jurnal Sinta 4/5 + Book Chapter.
+                    </p>
+                    <a href="https://wa.me/6282128721401" class="block mt-6 text-center text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition duration-300">
+                        Konsultasi Gratis >>
+                    </a>
+                </div>
+
+                <!-- Kartu Layanan 1: Proposal & Skripsi -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path d="M12 14l6.16-3.422a46.655 46.655 0 011.965-1.125l-2.039-1.114a45.696 45.696 0 00-11.832-1.965" />
+                            <path d="M12 14v9m6.16-3.422a46.655 46.655 0 001.965-1.125L21 16V9.5L12 14zm-12 0L3 9.5V16L1.875 16.578A46.655 46.655 0 013 17.575V20z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Proposal Skripsi</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 1.500.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bantuan penuh dalam penyusunan proposal (Bab 1-3) untuk skripsi dan tugas akhir.
+                    </p>
+                </div>
+
+                <!-- Kartu Layanan 2: Tesis & Proposal -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 2h4M7 6v14m10 0V6a2 2 0 00-2-2H9a2 2 0 00-2 2v14a2 2 0 002 2h8a2 2 0 002-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Proposal Tesis</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 2.500.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Pendampingan profesional dalam menyusun proposal (Bab 1-3) untuk tesis Anda.
+                    </p>
+                </div>
+
+                <!-- Kartu Layanan 3: Disertasi & Proposal -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.5 1.5L20 8.5L14.5 3L9 8.5" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Proposal Disertasi</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 3.500.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bimbingan mendalam untuk penyusunan proposal (Bab 1-3) disertasi.
+                    </p>
+                </div>
+                
+                <!-- Kartu Layanan 4: Full Skripsi -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-red-100 text-red-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-9m4 9l4-9m-5 9l4-9m-5 9l4-9m-5 9l4-9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Skripsi Lengkap</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 4.000.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bantuan penuh mulai dari penyusunan proposal hingga penulisan skripsi lengkap.
+                    </p>
+                </div>
+
+                <!-- Kartu Layanan 5: Full Tesis -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-purple-100 text-purple-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V3m0 21V3a2 2 0 00-2-2H5a2 2 0 00-2 2v20a2 2 0 002 2h6a2 2 0 002-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Tesis Lengkap</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 6.000.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bantuan penuh mulai dari penyusunan proposal hingga penulisan tesis lengkap.
+                    </p>
+                </div>
+
+                <!-- Kartu Layanan 6: Full Disertasi -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-orange-100 text-orange-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v4a2 2 0 002 2h4a2 2 0 002-2V7m-4 13v-3m-4 3v-3" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Disertasi Lengkap</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 7.000.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bantuan penuh mulai dari penyusunan proposal hingga penulisan disertasi lengkap.
+                    </p>
+                </div>
+                
+                <!-- Kartu Layanan 7: Artikel Jurnal Q1 & Q4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-cyan-100 text-cyan-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M15 13l-4 4m4-4l-4 4m4-4l-4 4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Artikel Jurnal Internasional</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 2.000.000</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Bantuan penulisan dan publikasi artikel di jurnal bereputasi internasional **Q1-Q4**.
+                    </p>
+                </div>
+
+                <!-- Kartu Layanan 8: Pembuatan Buku & Book Chapter -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-300">
+                    <div class="flex justify-center items-center w-16 h-16 bg-gray-100 text-gray-600 rounded-full mb-6 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 009-9H3a9 9 0 009 9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 009-9H3a9 9 0 009 9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-2">Pembuatan Buku & Book Chapter</h3>
+                    <p class="text-sm text-center font-bold text-green-600 mb-4">Harga Paket Spesial</p>
+                    <p class="text-gray-600 text-center text-sm">
+                        Pendampingan penuh dalam penulisan buku atau book chapter untuk kenaikan jabatan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Portofolio & Studi Kasus -->
+    <section id="portofolio" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Studi Kasus & Portofolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kartu Portofolio 1 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/9ca3af/ffffff?text=STUDI+KASUS+1" alt="Studi kasus 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Skripsi "Analisis Semiotika pada Iklan Media Sosial"</h4>
+                        <p class="text-gray-600 text-sm">
+                            Bantuan penulisan dari Bab 1 hingga 5, termasuk analisis data kualitatif dan interpretasi hasil.
+                        </p>
+                    </div>
+                </div>
+                <!-- Kartu Portofolio 2 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/9ca3af/ffffff?text=STUDI+KASUS+2" alt="Studi kasus 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Tesis "Dampak Digitalisasi Terhadap UMKM"</h4>
+                        <p class="text-gray-600 text-sm">
+                            Pendampingan penuh dalam penelitian kuantitatif, analisis regresi, dan penyusunan hasil.
+                        </p>
+                    </div>
+                </div>
+                <!-- Kartu Portofolio 3 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/9ca3af/ffffff?text=STUDI+KASUS+3" alt="Studi kasus 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Publikasi Jurnal Internasional Q4</h4>
+                        <p class="text-gray-600 text-sm">
+                            Penulisan artikel ilmiah dari nol hingga proses publikasi di jurnal Scopus Q4.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Testimoni Pelanggan -->
+    <section id="testimoni" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Kata Mereka yang Sudah Membuktikan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg">
+                    <p class="text-lg italic text-gray-600">
+                        "Saya sangat terbantu dengan jasa Pakar Akademik. Skripsi saya selesai tepat waktu dan hasilnya sangat memuaskan. Revisi jadi lebih mudah!"
+                    </p>
+                    <div class="mt-6 font-semibold text-gray-800">- S********, Mahasiswi</div>
+                </div>
+                <!-- Testimoni 2 -->
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg">
+                    <p class="text-lg italic text-gray-600">
+                        "Pelayanan yang cepat, ramah, dan profesional. Artikel jurnal saya berhasil tembus di jurnal internasional. Terima kasih banyak!"
+                    </p>
+                    <div class="mt-6 font-semibold text-gray-800">- D*** *****, Mahasiswa S2</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Pusat Edukasi & Blog -->
+    <section id="blog" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Pusat Edukasi & Blog</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Artikel 1 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=BLOG+1" alt="Blog 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">5 Kesalahan Fatal Saat Menulis Proposal Skripsi</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Hindari jebakan umum yang sering membuat proposal Anda ditolak oleh dosen pembimbing.
+                        </p>
+                        <a href="#" class="text-indigo-600 font-bold hover:underline">Baca Selengkapnya >></a>
+                    </div>
+                </div>
+                <!-- Artikel 2 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=BLOG+2" alt="Blog 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Strategi Jitu Menembus Jurnal Internasional</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Langkah demi langkah untuk mempublikasikan artikel Anda di jurnal bereputasi tinggi.
+                        </p>
+                        <a href="#" class="text-indigo-600 font-bold hover:underline">Baca Selengkapnya >></a>
+                    </div>
+                </div>
+                <!-- Artikel 3 -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://placehold.co/600x400/e5e7eb/6b7280?text=BLOG+3" alt="Blog 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Tips Menghadapi Revisi Skripsi Tanpa Stres</h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Pelajari cara mengelola revisi secara efektif dan efisien untuk kelulusan tepat waktu.
+                        </p>
+                        <a href="#" class="text-indigo-600 font-bold hover:underline">Baca Selengkapnya >></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian FAQ (Pertanyaan Umum) -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Pertanyaan Umum (FAQ)</h2>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <button class="flex justify-between items-center w-full focus:outline-none faq-toggle">
+                        <span class="text-lg font-semibold text-gray-800">Apakah data dan dokumen saya aman?</span>
+                        <svg class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>Ya, kami menjamin kerahasiaan penuh atas semua data dan dokumen yang Anda berikan. Kami tidak akan membagikan informasi pribadi atau materi proyek Anda kepada pihak ketiga mana pun.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <button class="flex justify-between items-center w-full focus:outline-none faq-toggle">
+                        <span class="text-lg font-semibold text-gray-800">Bagaimana proses pengerjaannya?</span>
+                        <svg class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>Setelah Anda menghubungi kami, kami akan melakukan konsultasi untuk memahami kebutuhan Anda secara detail. Tim kami akan menyusun draf proposal atau proyek, dan Anda dapat melakukan revisi atau memberikan masukan hingga hasilnya sesuai dengan harapan Anda.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <button class="flex justify-between items-center w-full focus:outline-none faq-toggle">
+                        <span class="text-lg font-semibold text-gray-800">Apakah ada jaminan revisi?</span>
+                        <svg class="w-6 h-6 text-indigo-600 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-content mt-4 text-gray-600 hidden">
+                        <p>Ya, kami memberikan jaminan revisi tak terbatas hingga Anda merasa puas, selama revisi tersebut tidak mengubah tema atau topik awal yang sudah disepakati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Kami -->
+    <section id="tentang-kami" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Tentang Kami</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                Pakar Akademik didirikan dengan satu misi sederhana: menjadi mitra terpercaya bagi setiap individu yang membutuhkan dukungan dalam perjalanan akademik mereka. Kami adalah tim ahli dengan pengalaman bertahun-tahun di berbagai bidang keilmuan, siap membantu Anda meraih kesuksesan.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                Kami percaya setiap individu berhak meraih kesuksesan akademik. Tujuan utama kami adalah membantu mahasiswa yang terhambat, dosen yang tidak memiliki waktu, dan setiap individu yang membutuhkan panduan.
+            </p>
+            <p class="text-xl font-bold text-indigo-600 mb-8">
+                Layanan GRATIS untuk anak yatim dan yang kurang mampu.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bagian Misi & Tujuan -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Informasi Pembayaran</h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                Untuk kemudahan transaksi, kami menyediakan beberapa metode pembayaran. Berikut adalah rinciannya:
+            </p>
+            <div class="bg-white p-8 rounded-2xl shadow-xl space-y-4">
+                <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <p class="font-semibold">Transfer Bank (BCA)</p>
+                    <p class="text-sm text-gray-600">No. Rekening: 1234567890<br>Atas Nama: Jasa Akademik</p>
+                </div>
+                <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <p class="font-semibold">E-Wallet (OVO/Gopay)</p>
+                    <p class="text-sm text-gray-600">No. Ponsel: 0812-3456-7890</p>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">*Semua pembayaran harus dilakukan setelah kesepakatan dan sebelum pengerjaan dimulai, kecuali jika ada perjanjian khusus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section id="kontak" class="py-16 md:py-24 bg-gray-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Siap untuk Mulai?</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Jangan biarkan tugas akademik menghambat Anda. Hubungi kami sekarang untuk konsultasi gratis.
+            </p>
+            <a href="https://wa.me/6282128721401" class="bg-green-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105 inline-flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8.28 20.322a8.001 8.001 0 01-.225-10.36L6.5 7.5M16.72 20.322a8.001 8.001 0 00-.225-10.36L17.5 7.5M12 18v-8m0 0a4 4 0 01-4-4h8a4 4 0 01-4 4z" />
+                </svg>
+                Hubungi Admin: 0821-2872-1401
+            </a>
+            <p class="mt-4 text-sm text-gray-400">
+                (Klik untuk langsung terhubung via WhatsApp)
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">© 2025 Jasa Bantuan Akademik. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Data untuk kalkulator estimasi
+            const prices = {
+                skripsi_proposal: 1500000,
+                skripsi_full: 4000000,
+                tesis_proposal: 2500000,
+                tesis_full: 6000000,
+                disertasi_proposal: 4000000,
+                disertasi_full: 12000000,
+                jurnal_sinta: 2500000,
+                jurnal_internasional: 10000000
+            };
+
+            const complexityMultipliers = {
+                normal: 1,
+                medium: 1.15,
+                high: 1.30
+            };
+
+            const deadlineMultipliers = {
+                normal: 1,
+                urgent: 1.2,
+                fast_track: 1.5
+            };
+
+            const calculateBtn = document.getElementById('calculate_btn');
+            const resultDiv = document.getElementById('estimation-result');
+            const estimatedPriceEl = document.getElementById('estimated_price');
+
+            // Logika untuk tombol kalkulator
+            calculateBtn.addEventListener('click', () => {
+                const projectType = document.getElementById('project_type').value;
+                const complexity = document.getElementById('complexity').value;
+                const deadline = document.getElementById('deadline').value;
+
+                const basePrice = prices[projectType];
+                const finalPrice = basePrice * complexityMultipliers[complexity] * deadlineMultipliers[deadline];
+
+                estimatedPriceEl.textContent = 'Rp ' + finalPrice.toLocaleString('id-ID');
+                resultDiv.classList.remove('hidden');
+            });
+
+            // JavaScript untuk FAQ Accordion
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('svg');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // JavaScript untuk Counter Animasi
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id;
+                        let targetValue = 0;
+                        if (targetId === 'counter1') targetValue = 1200;
+                        if (targetId === 'counter2') targetValue = 1000;
+                        if (targetId === 'counter3') targetValue = 200;
+                        
+                        let current = 0;
+                        const duration = 2000;
+                        const step = targetValue / (duration / 10);
+                        const interval = setInterval(() => {
+                            current += step;
+                            if (current >= targetValue) {
+                                clearInterval(interval);
+                                current = targetValue;
+                            }
+                            entry.target.textContent = Math.round(current).toLocaleString('id-ID');
+                        }, 10);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            observer.observe(document.getElementById('counter1'));
+            observer.observe(document.getElementById('counter2'));
+            observer.observe(document.getElementById('counter3'));
+        });
+    </script>
+
+</body>
+</html>
