@@ -28,24 +28,146 @@
 <body class="antialiased">
 
     <!-- Header & Navigasi -->
-    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-600">
-                Pakar Akademik
-            </a>
-            <nav>
-                <a href="#estimasi" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Estimasi</a>
-                <a href="#layanan" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Layanan</a>
-                <a href="#portofolio" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Portofolio</a>
-                <a href="#testimoni" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">Testimoni</a>
-                <a href="#faq" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300">FAQ</a>
-                <a href="#tentang-kami" class="text-gray-600 hover:text-indigo-600 mr-4 transition duration-300 hidden md:inline-block">Tentang Kami</a>
-                <a href="#kontak" class="bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
-                    Hubungi Kami
-                </a>
-            </nav>
-        </div>
-    </header>
+  <!-- Header & Navigasi -->
+<header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="text-2xl font-bold text-indigo-600">
+      Pakar Akademik
+    </a>
+
+    <!-- Tombol Hamburger (Mobile) -->
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+      <!-- Icon Hamburger -->
+      <svg id="hamburger" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Icon Close -->
+      <svg id="close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Menu Navigasi -->
+    <nav id="nav-menu"
+      class="absolute top-full left-0 w-full bg-white shadow-md md:shadow-none md:static md:flex md:w-auto md:space-x-4 transition-all duration-500 ease-in-out hidden md:flex">
+      <a href="#estimasi"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">Estimasi</a>
+      <a href="#layanan"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">Layanan</a>
+      <a href="#portofolio"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">Portofolio</a>
+      <a href="#testimoni"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">Testimoni</a>
+      <a href="#faq"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">FAQ</a>
+      <a href="#tentang-kami"
+        class="block px-4 py-2 text-gray-600 hover:text-indigo-600 transition duration-300">Tentang Kami</a>
+      <a href="#kontak"
+        class="block m-2 md:m-0 bg-indigo-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+        Hubungi Kami
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  const hamburger = document.getElementById('hamburger');
+  const closeIcon = document.getElementById('close');
+  const navLinks = navMenu.querySelectorAll('a');
+
+  let isOpen = false;
+
+  function openMenu() {
+    navMenu.classList.remove('hidden', 'animate-slideUp');
+    navMenu.classList.add('animate-slideDown');
+    hamburger.classList.add('hidden');
+    closeIcon.classList.remove('hidden');
+    isOpen = true;
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('animate-slideDown');
+    navMenu.classList.add('animate-slideUp');
+    hamburger.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    isOpen = false;
+    navMenu.addEventListener('animationend', () => {
+      if (!isOpen && window.innerWidth < 768) {
+        navMenu.classList.add('hidden');
+      }
+    }, { once: true });
+  }
+
+  menuToggle.addEventListener('click', () => {
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // Tutup menu otomatis kalau klik link di HP
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 768 && isOpen) {
+        closeMenu();
+      }
+    });
+  });
+
+  // Kalau resize ke desktop, pastikan menu muncul
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      navMenu.classList.remove('hidden', 'animate-slideUp', 'animate-slideDown');
+    } else if (!isOpen) {
+      navMenu.classList.add('hidden');
+    }
+  });
+</script>
+
+<!-- Animasi Custom -->
+<style>
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+  }
+
+  .animate-slideDown {
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 0.4s ease forwards;
+  }
+
+  /* Smooth Scroll & Offset */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 90px; /* Sesuaikan dengan tinggi header */
+  }
+</style>
+
 
     <!-- Bagian Utama / Hero Section -->
     <main class="py-12 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -64,7 +186,7 @@
     
     <!-- Bagian Nilai Unggulan: Murah, Ramah, Terpercaya, Layanan Siap Sedia -->
     <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-4 ">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <!-- Kartu Nilai 1: Murah -->
                 <div class="flex flex-col items-center p-6 rounded-2xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
@@ -198,9 +320,11 @@
                     </div>
                     <h3 class="text-xl font-semibold text-center mb-2 text-white">Publikasi Sinta Fast Track</h3>
                     <p class="text-sm text-center font-bold text-yellow-300 mb-4">Mulai dari Rp 500.000</p>
-                    <p class="text-white text-center text-sm">
-                        Penulisan artikel selesai dalam **3 hari**, publikasi di jurnal **Sinta 4 & 5** dalam **10 hari**.
+                   <p class="text-white text-center text-sm">
+                    Penulisan artikel selesai dalam <strong>3 hari</strong>, publikasi di jurnal 
+                    <strong>Sinta 4 & 5</strong> dalam <strong>10 hari</strong>.
                     </p>
+
                     <a href="https://wa.me/6282128721401" class="block mt-6 text-center text-sm font-semibold text-white hover:text-yellow-300 transition duration-300">
                         Hubungi untuk Detail >>
                     </a>
@@ -319,7 +443,7 @@
                     <h3 class="text-xl font-semibold text-center mb-2">Artikel Jurnal Internasional</h3>
                     <p class="text-sm text-center font-bold text-green-600 mb-4">Mulai dari Rp 2.000.000</p>
                     <p class="text-gray-600 text-center text-sm">
-                        Bantuan penulisan dan publikasi artikel di jurnal bereputasi internasional **Q1-Q4**.
+                        Bantuan penulisan dan publikasi artikel di jurnal bereputasi internasional <strong>Q1-Q4</strong>.
                     </p>
                 </div>
 
@@ -495,10 +619,18 @@
                 Kami percaya setiap individu berhak meraih kesuksesan akademik. Tujuan utama kami adalah membantu mahasiswa yang terhambat, dosen yang tidak memiliki waktu, dan setiap individu yang membutuhkan panduan.
             </p>
             <p class="text-lg text-gray-600 leading-relaxed mb-6">
-              lebih lnajut kunjungi Website Resmi KAmi di HTTPS://www.simpulacademy.com
-            </p>
+            lebih lanjut kunjungi Website Resmi Kami di 
+            <a href="https://www.simpulacademy.com" target="_blank" rel="noopener noreferrer"
+                class="relative text-blue-600 hover:text-indigo-600 transition duration-300 
+                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 
+            after:h-[2px] after:bg-gradient-to-r after:from-indigo-500 after:to-purple-500 
+            after:transition-all after:duration-500 hover:after:w-full">
+            simpulacademy.com
+            </a>
+</p>
+
             <p class="text-xl font-bold text-indigo-600 mb-8">
-                Layanan GRATIS untuk anak yatim dan yang kurang mampu.
+                Layanan GRATIS untuk ANAK YATIM dan yang KURANG MAMPU.
             </p>
         </div>
     </section>
@@ -513,11 +645,11 @@
             <div class="bg-white p-8 rounded-2xl shadow-xl space-y-4">
                 <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <p class="font-semibold">Transfer Bank (BCA)</p>
-                    <p class="text-sm text-gray-600">No. Rekening: 1234567890<br>Atas Nama: Jasa Akademik</p>
+                    <p class="text-sm text-gray-600">No. Rekening: ****** <br>Atas Nama: Jasa Akademik</p>
                 </div>
                 <div class="flex flex-col md:flex-row items-center justify-between p-4 bg-gray-50 rounded-lg">
                     <p class="font-semibold">E-Wallet (OVO/Gopay)</p>
-                    <p class="text-sm text-gray-600">No. Ponsel: 0812-3456-7890</p>
+                    <p class="text-sm text-gray-600">No. Ponsel: 085262608383</p>
                 </div>
                 <p class="text-sm text-gray-500 mt-4">*Semua pembayaran harus dilakukan setelah kesepakatan dan sebelum pengerjaan dimulai, kecuali jika ada perjanjian khusus.</p>
             </div>
